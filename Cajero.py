@@ -42,7 +42,8 @@ while True:
                 1.- Consultar saldo
                 2.- Retirar saldo
                 3.- Histórico de Movimientos
-                4.- Salir""")
+                4.- Ver NIP
+                5.- Salir""")
 
                 # Se solicita al usuario colocar una opción del menú
                 opcion = int(input("Digite una opcion: "))
@@ -87,8 +88,10 @@ while True:
                                     f"Fecha: {i['fecha']}, Movimiento: -{i['movimiento']}, Saldo Anterior: {i['saldo_anterior']}")
                     else:
                         print("No tiene movimientos realizados, gracias")
-                # 4.- Salir del programa
                 elif opcion == 4:
+                    print(f"Su NIP es {no_cuentas[0].get('Nip')}")
+                # 4.- Salir del programa
+                elif opcion == 5:
                     print("Gracias por utilizar el sistema de cajero automatico")
                     break
                 else:
